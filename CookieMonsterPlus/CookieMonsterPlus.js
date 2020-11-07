@@ -1970,9 +1970,9 @@ CM.Disp.AddMenuStats = function(title) {
 			conjureReqFrenFrag.appendChild(conjureReqFrenSmall);
 		}
 		stats.appendChild(listing(listingQuest('\"Conjure\" Cookies Required (Frenzy)', 'GoldCookTooltipPlaceholder'), conjureReqFrenFrag));
-		stats.appendChild(listing(listingQuest('\"Conjure\" Reward (MAX)' + (luckySplit ? ' (Golden / Wrath)' : ''), 'GoldCookTooltipPlaceholder'),  document.createTextNode(Beautify(conjureRewardMax) + (luckySplit ? (' / ' + Beautify(conjureRewardMaxWrath)) : ''))));
-		stats.appendChild(listing(listingQuest('\"Conjure\" Reward (MAX) (Frenzy)' + (luckySplit ? ' (Golden / Wrath)' : ''), 'GoldCookTooltipPlaceholder'),  document.createTextNode(Beautify(conjureRewardFrenzyMax) + (luckySplit ? (' / ' + Beautify(conjureRewardFrenzyMaxWrath)) : ''))));
-		stats.appendChild(listing(listingQuest('\"Conjure\" Reward (CUR)' + (luckySplit ? ' (Golden / Wrath)' : ''), 'GoldCookTooltipPlaceholder'),  document.createTextNode(Beautify(conjureCur) + (luckySplit ? (' / ' + Beautify(conjureCurWrath)) : ''))));
+		stats.appendChild(listing(listingQuest('\"Conjure\" Reward (MAX)' + (conjureSplit ? ' (Golden / Wrath)' : ''), 'GoldCookTooltipPlaceholder'),  document.createTextNode(Beautify(conjureRewardMax) + (conjureSplit ? (' / ' + Beautify(conjureRewardMaxWrath)) : ''))));
+		stats.appendChild(listing(listingQuest('\"Conjure\" Reward (MAX) (Frenzy)' + (conjureSplit ? ' (Golden / Wrath)' : ''), 'GoldCookTooltipPlaceholder'),  document.createTextNode(Beautify(conjureRewardFrenzyMax) + (conjureSplit ? (' / ' + Beautify(conjureRewardFrenzyMaxWrath)) : ''))));
+		stats.appendChild(listing(listingQuest('\"Conjure\" Reward (CUR)' + (conjureSplit ? ' (Golden / Wrath)' : ''), 'GoldCookTooltipPlaceholder'),  document.createTextNode(Beautify(conjureCur) + (conjureSplit ? (' / ' + Beautify(conjureCurWrath)) : ''))));
 	}
 
 	stats.appendChild(header('Lucky Cookies', 'Lucky'));
@@ -3085,7 +3085,7 @@ CM.ConfigDefault = {
 	SayTime: 1, 
 	GrimoireBar: 1, 
 	Scale: 2, 
-	StatsPref: {Lucky: 1, Chain: 1, Prestige: 1, Wrink: 1, Sea: 1, Misc: 1}, 
+	StatsPref: {Lucky: 1, Conjure: 1, Chain: 1, Prestige: 1, Wrink: 1, Sea: 1, Misc: 1}, 
 	Colors : {Blue: '#4bb8f0', Green: '#00ff00', Yellow: '#ffff00', Orange: '#ff7f00', Red: '#ff0000', Purple: '#ff00ff', Gray: '#b3b3b3', Pink: '#ff1493', Brown: '#8b4513'}
 };
 CM.ConfigPrefix = 'CMConfig';
