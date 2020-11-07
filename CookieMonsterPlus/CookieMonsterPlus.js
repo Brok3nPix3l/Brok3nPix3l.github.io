@@ -1916,7 +1916,7 @@ CM.Disp.AddMenuStats = function(title) {
 	}
 
 
-  stats.appendChild(header('Conjure Cookies', 'Conjure'));
+  	stats.appendChild(header('Conjure Cookies', 'Conjure'));
 	if (CM.Config.StatsPref.Conjure) {
 		var conjureColor = ((Game.cookies + CM.Disp.GetWrinkConfigBank()) < CM.Cache.Conjure) ? CM.Disp.colorRed : CM.Disp.colorGreen;
 		var conjureTime = ((Game.cookies + CM.Disp.GetWrinkConfigBank()) < CM.Cache.Conjure) ? CM.Disp.FormatTime((CM.Cache.Conjure - (Game.cookies + CM.Disp.GetWrinkConfigBank())) / CM.Disp.GetCPS()) : '';
@@ -2923,6 +2923,7 @@ CM.Loop = function() {
 
 			CM.Sim.NoGoldSwitchCookiesPS(); // Needed first
 			CM.Cache.RemakeLucky();
+			CM.Cache.RemakeConjure();
 			CM.Cache.RemakeChain();
 
 			CM.Cache.RemakeSeaSpec();
