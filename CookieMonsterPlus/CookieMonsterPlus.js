@@ -2542,7 +2542,7 @@ CM.Disp.UpdateTooltip = function() {
 					if (CM.Config.ToolWarnCautBon == 1) {
 						var bonusNoFren = bonus;
 						bonusNoFren /= CM.Sim.getCPSBuffMult();
-						warn += ((bonusNoFren * 60 * 15) / 0.15);
+						warn += ((bonusNoFren * 60 * 30) / 0.15);
 					}
 					var caut = warn * 7;
 					var amount = (Game.cookies + CM.Disp.GetWrinkConfigBank()) - price;
